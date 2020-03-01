@@ -1,1 +1,3 @@
-module github.com/wit-ai/wit-go
+module github.com/swys/wit-go
+
+go 1.12
