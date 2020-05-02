@@ -19,10 +19,10 @@ type Sample struct {
 type SampleEntity struct {
 	Entity       string         `json:"entity"`
 	Value        string         `json:"value"`
-	Role         string         `json:"role"`
+	Role         string         `json:"role,omitempty"`
 	Start        int            `json:"start,omitempty"`
 	End          int            `json:"end,omitempty"`
-	Subentitites []SampleEntity `json:"subentities"`
+	Subentitites []SampleEntity `json:"subentities,omitempty"`
 }
 
 // ValidateSampleResponse - https://wit.ai/docs/http/20170307#post__samples_link
