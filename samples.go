@@ -60,8 +60,8 @@ func (c *Client) ValidateSamples(samples []Sample) (*ValidateSampleResponse, err
 		return nil, err
 	}
 
-	fmt.Printf("This is the RAW JSON being sent to wit.ai from wit go lib")
-	fmt.Printf("%v", string(samplesJSON))
+	fmt.Printf("This is the RAW JSON being sent to wit.ai from wit go lib\n")
+	fmt.Printf("%v\n", string(samplesJSON))
 	resp, err := c.request(http.MethodPost, "/samples", "application/json", bytes.NewBuffer(samplesJSON))
 	if err != nil {
 		return nil, err
